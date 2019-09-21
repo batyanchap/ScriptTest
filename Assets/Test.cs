@@ -21,9 +21,9 @@ public class Boss {
 
         // 魔法攻撃用の関数
         public void Magic(int cm){
-                //mpを減らす
-                this.mp -= cm;
-                if(this.mp > 0){
+                if(this.mp >= cm){
+                        //mpを減らす
+                        this.mp -= cm;
                         Debug.Log("魔法攻撃をした。残りMPは"+this.mp+"。");
                 }else{
                         Debug.Log("MPが足りないため魔法が使えない。");
